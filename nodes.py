@@ -70,7 +70,11 @@ class SList(Generic[TNodeValue]):
             runner = runner.next
         return self
 
-    def insert_node_at(self, value: TNodeValue, index: int = 0) -> "SList[TNodeValue]":
+    def insert_node_at(
+        self,
+        value: TNodeValue,
+        index: int = 0,
+    ) -> "SList[TNodeValue]":
         if index == 0:
             self.add_to_front(value)
             return self
